@@ -3,7 +3,7 @@ import { TextInputComponent } from '../../inputs/text-input/text-input.component
 import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'navbar',
   standalone: true,
   imports: [TextInputComponent,NgIf],
   templateUrl: './navbar.component.html',

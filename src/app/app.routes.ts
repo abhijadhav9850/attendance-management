@@ -1,7 +1,15 @@
 import { Routes } from '@angular/router';
-import { NavbarComponent } from './components/layouts/navbar/navbar.component';
-import { SidebarComponent } from './components/layouts/sidebar/sidebar.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DashboardLayoutComponent } from './pages/dashboard-layout/dashboard-layout.component';
+
 
 export const routes: Routes = [
-    {path:'sidebar', component:SidebarComponent}
+
+    { path: '', pathMatch: 'full', redirectTo: 'dashboard-layout' },
+    { path: 'dashboard-layout', component: DashboardLayoutComponent,children:[
+        {path:'dashboard', component: DashboardComponent}
+    ] },
+   
+
+
 ];

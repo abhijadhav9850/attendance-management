@@ -1,11 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'sidebar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,NavbarComponent],
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {
+
+  hide:any= false;
 
 }

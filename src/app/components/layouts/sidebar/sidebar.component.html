@@ -1,11 +1,45 @@
-<div class="flex flex-col gap-12 h-full left-0 sticky top-0 w-72 ">
-    <div class="bg-[#0f172a] flex flex-col gap-12 h-full p-5 w-72">
-        <div class="text-white">
-            <p>Services</p>
-            <p>Home</p>
-            <p>Self-Services</p>
-            <p>Leave Tracker</p>
-            <p>Time Tracker</p>
+<div  class="flex left-0 sticky top-0 h-[100vh]">
+    <div class="bg-[#0f172a] flex flex-col gap-6 p-3 h-full">
+        <div class="text-white flex flex-col gap-8 mt-3">
+            <div class="flex flex-col items-center">
+                <img class="h-8" src="https://static.zohocdn.com/zohopeople/people3/images/svg/app.11b5c3cca20a7a3c8df9a9aaa3c4aa1f.svg" alt="services image">
+                <p>Services</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class='bx bxs-home text-2xl'></i>
+                <p>Home</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class='bx bxs-user text-2xl'></i>
+                <p class="whitespace-nowrap">Self-Services</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class='bx bx-calendar-check text-2xl'></i>
+                <p class="whitespace-nowrap">Leave Tracker</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class='bx bx-time text-2xl'></i>
+                <p class="whitespace-nowrap">Time Tracker</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class='bx bx-pie-chart-alt text-2xl'></i>
+                <p>Reports</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class='bx bx-dots-horizontal-rounded text-3xl'></i>
+                <p>More</p>
+            </div>
+            <div (click)="this.hide =! this.hide" class="flex flex-col items-center">
+                <i class='bx bx-menu-alt-left text-3xl'></i>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="hide" class="bg-[#27334e] flex flex-col h-[100vh] w-80">
+        <div class="text-white flex flex-col gap-10">
+            <div class="flex flex-col gap-3 text-xl mt-5 ml-5">
+                <p>Dashboard</p>
+                <p>Feeds</p>
+            </div>
         </div>
     </div>
 </div>
