@@ -1,10 +1,9 @@
-<header class="bg-white border-b border-gray-200 flex justify-between items-center gap-2 py-4 px-6 sticky top-0 z-10">
-    <i *ngIf="!show_search" class="bx bx-menu bx-rotate-180 cursor-pointer text-3xl" (click)=" this.show_sidebar = !this.show_sidebar"></i>
-        <app-text-input *ngIf="show_search" class="flex-grow"></app-text-input>
-        <i *ngIf="show_search" class="bx bx-x text-3xl cursor-pointer" (click)="show_search = false"></i>
+<header class="border-b border-gray-200  bg-white flex gap-2 items-center justify-between py-4 px-6 sticky top-0 z-10">
+    <i *ngIf="!show_search" (click)="this.show_sidebar = !this.show_sidebar" class="bx bx-menu bx-rotate-180 cursor-pointer text-3xl"></i>
+    <app-text-input *ngIf="show_search" class="flex-grow"></app-text-input>
+    <i *ngIf="show_search" (click)="show_search = false" class="bx bx-x cursor-pointer text-3xl"></i>
     <div *ngIf="!show_search" class="flex items-center">
-        <i class="bx bx-search text-3xl cursor-pointer mr-4" (click)=" this.show_search = !this.show_search"></i>
+        <i (click)=" this.show_search = !this.show_search" class="bx bx-search cursor-pointer mr-4 text-3xl"></i>
         <i class="bx bx-message-square-add cursor-pointer text-3xl"></i>
     </div>
 </header>
-
