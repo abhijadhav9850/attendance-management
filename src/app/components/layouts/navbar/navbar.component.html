@@ -1,1 +1,8 @@
-<p>navbar works!</p>
+<header class="bg-white border-b border-gray-200 flex justify-between items-center gap-2 py-4 px-6 sticky top-0 z-10">
+            <i class="bx bx-menu bx-rotate-180 cursor-pointer text-3xl" (click)="show_sidebar = !show_sidebar"></i>
+            <app-text-input [hidden]="show_search" class="flex-grow"></app-text-input>
+          <div class="flex items-center">
+            <i class='bx bx-search text-3xl cursor-pointer mr-4'(click)="show_search = !show_search"></i>
+            <i class='bx bx-message-square-add cursor-pointer text-3xl'></i>
+          </div>
+</header>
