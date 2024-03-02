@@ -1,45 +1,33 @@
-<div  class="flex left-0 sticky top-0 h-[100vh]">
-    <div class="bg-[#0f172a] flex flex-col gap-6 p-3 h-full">
-        <div class="text-white flex flex-col gap-8 mt-3">
-            <div class="flex flex-col items-center">
-                <img class="h-8" src="https://static.zohocdn.com/zohopeople/people3/images/svg/app.11b5c3cca20a7a3c8df9a9aaa3c4aa1f.svg" alt="services image">
-                <p>Services</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class='bx bxs-home text-2xl'></i>
-                <p>Home</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class='bx bxs-user text-2xl'></i>
-                <p class="whitespace-nowrap">Self-Services</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class='bx bx-calendar-check text-2xl'></i>
-                <p class="whitespace-nowrap">Leave Tracker</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class='bx bx-time text-2xl'></i>
-                <p class="whitespace-nowrap">Time Tracker</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class='bx bx-pie-chart-alt text-2xl'></i>
-                <p>Reports</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class='bx bx-dots-horizontal-rounded text-3xl'></i>
-                <p>More</p>
-            </div>
-            <div (click)="this.hide =! this.hide" class="flex flex-col items-center">
-                <i class='bx bx-menu-alt-left text-3xl'></i>
+<div class="flex h-[100vh] left-0 sticky top-0">
+    <div class="bg-[#0f172a] flex flex-col gap-8 h-full p-5 w-72">
+        <div class="flex justify-end cursor-pointer text-white text-2xl gap-6">
+            <div>
+                <i class='bx bxs-bell mr-4'></i>
+                <i class='bx bx-user-circle'></i>
             </div>
         </div>
-    </div>
-    <div *ngIf="hide" class="bg-[#27334e] flex flex-col h-[100vh] w-80">
-        <div class="text-white flex flex-col gap-10">
-            <div class="flex flex-col gap-3 text-xl mt-5 ml-5">
-                <p>Dashboard</p>
-                <p>Feeds</p>
+        <div class="flex flex-col gap-4 items-center justify-center">
+            <div class="flex justify-center ">
+                <img class="h-24 rounded-full" src="https://media.licdn.com/dms/image/D4D03AQHJGJyKWrNuMA/profile-displayphoto-shrink_800_800/0/1698318206057?e=2147483647&v=beta&t=6GRlhwMFAecvT02VDJA-NBoo1lGqSUPteomvTXcmg6M">
+            </div>
+            <div class="flex flex-col gap-1 items-center justify-center ">
+                <h1 class="font-bold font-sans ordinal text-sm text-white">User Name</h1>
+                <p class="ordinal text-xs text-blue-100"></p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5">
+            <h1 class="font-bold font-sans ordinal text-blue-600 text-sm whitespace-nowrap">Welcome to Attendance Management</h1>
+            <div class="text-white flex flex-col gap-5">
+                <p> <i class='bx bxs-grid text-2xl mr-2'></i> Services</p>
+                <p> <i class='bx bxs-home text-2xl mr-2'></i> Home </p>
+                <p> <i class='bx bxs-user text-2xl mr-2 '></i> Self-Services </p>
+                <p> <i class='bx bx-calendar-check text-2xl mr-2'></i> Leave Tracker</p>
+                <p> <i class='bx bx-time text-2xl mr-2'></i> Time Tracker</p>
+                <p> <i class='bx bx-pie-chart-alt text-2xl mr-2'></i> Reports</p>
+                <p> <i class='bx bx-dots-horizontal-rounded text-2xl mr-2'></i> More</p>
             </div>
         </div>
     </div>
 </div>
+
+
