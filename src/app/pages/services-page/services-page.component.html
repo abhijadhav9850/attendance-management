@@ -1,15 +1,15 @@
-<div class="p-4 flex flex-col justify-center">
-    <div class="flex justify-between items-center">
+<div class="flex flex-col justify-center p-4">
+    <div class="flex items-center justify-between">
         <p class="text-lg">All Services</p>
         <div class="flex flex-col">
             <app-search-input></app-search-input>
             <hr class="w-60">
         </div>
     </div>
-    <div class="grid xl:grid-cols-8 gap-4 mt-4 md:grid-cols-2">
-        <div class="border border-gray-200 shadow-lg hover:shadow-2xl md:w-48 md:h-48 xl:w-40 xl:h-40 p-2 flex flex-col items-center justify-around" *ngFor="let s of services">
-            <img class="h-20 w-20 shadow-md rounded-xl p-2" [src]="s.image" alt="">
-            <p class="text-base font-semibold">{{s.name}}</p>
+    <div class="grid gap-4 md:grid-cols-2 mt-4 xl:grid-cols-6">
+        <div class="border border-gray-200 flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-48 p-2 shadow-lg xl:w-40 xl:h-40" *ngFor="let s of services">
+            <img class="h-20 p-2 rounded-xl shadow-md w-20" [src]="s.image" alt="">
+            <p class="font-semibold text-base">{{s.name}}</p>
         </div>
     </div>
 </div>
