@@ -7,7 +7,7 @@
         <i class="bx bx-message-square-add cursor-pointer text-3xl" (click)="popup_open = !popup_open"></i>
     </div>
 </header>
-<div class="flex justify-end p-2">
+<div class="absolute flex justify-end p-2 right-0">
     <div class="border border-gray-300 flex h-60 shadow-xl w-80" *ngIf="!popup_open" >
     <div class="bg-gray-200 flex flex-col gap-2 items-start p-1">
             <button class="cursor-pointer focus:bg-blue-500 focus:outline-none focus:text-white px-1 py-1 rounded-sm" (click)="show_apply_leave = true; show_travel_request = false;show_HR_letter = false">Leave Tracker</button>
