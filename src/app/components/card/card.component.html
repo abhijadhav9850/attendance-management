@@ -1,0 +1,43 @@
+<div class="grid lg:grid-cols-12 overflow-hidden p-2 relative sm:grid-cols-1">
+  <div *ngFor="let item of card_data"
+    class="bg-white border border-gray-200 dark:border-gray-700 dark:bg-gray-800 lg:col-span-4 lg:w-full max-w-sm md:w-full mt-4 px-2 rounded-lg shadow w-full">
+    <div class="flex items-center justify-between gap-1 py-4 border-b border-gray-500">
+      <div class="flex items-center">
+        <p class="pl-4 font-sans font-semibold">{{item.title}}</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <p class="text-xs text-slate-400">{{item.cap}}</p>
+        <p class="bg-slate-400 text-xs font-bold p-0.5 px-2.5 rounded-md">{{item.count}}</p>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center py-16">
+      <img class="h-40" [src]="item.image">
+      <p class="font-bold text-5xl">{{item.hrs}}</p>
+      <p class="text-gray-500 text-2xl">{{item.date}}</p>
+      <p class="text-orange-300 text-sm">{{item.early}}</p>
+      <p class="text-gray-500">{{item.caption}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="p-2 relative overflow-hidden grid sm:grid-cols-1 lg:grid-cols-12">
+  <div class="lg:col-span-4 mt-4 px-2 w-full lg:w-full md:w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex items-center justify-between gap-1 py-4 border-b border-gray-500">
+      <div class="flex items-center">
+        <img class="h-3 absolute top-7.5 left-4" src="https://cdn.icon-icons.com/icons2/1458/PNG/512/braillesixdots_99639.png">
+        <div class="flex items-center gap-2">
+          <p class="pl-4 font-semibold font-sans">My Timelogs</p>
+          <img class="h-5" src="../../../assets/plus-circle-solid-24.png">
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <p class="text-xs text-slate-400">Total Hours</p>
+        <p class="bg-slate-400 text-xs font-bold py-0.5 px-2 rounded-md">00:00</p>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center py-16">
+      <img class="h-40" src="https://png.pngtree.com/png-clipart/20221122/ourmid/pngtree-happy-birthday-text-effect-png-image_241348.png">
+      <p class="text-gray-500">No birthdays today</p>
+    </div>
+  </div>
+</div>
