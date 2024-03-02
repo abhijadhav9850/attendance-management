@@ -9,10 +9,10 @@ import { SearchInputComponent } from '../../inputs/search-input/search-input.com
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
-  show_sidebar = true;
-  show_search = false;
   popup_open = true;
+  show_search = false;
+  show_sidebar = true;
   show_apply_leave = true;
-  show_travel_request = false;
   show_HR_letter = false
+  show_travel_request = false;
 }
