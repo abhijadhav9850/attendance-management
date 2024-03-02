@@ -1,0 +1,13 @@
+<div class="flex justify-between p-2">
+    <p class="text-lg">All Services</p>
+    <div class="flex flex-col">
+        <app-search-input></app-search-input>
+        <hr class="w-60">
+    </div>
+</div>
+<div class="grid grid-cols-8 gap-5 p-2 mt-4">
+    <div class="border border-gray-200 shadow-lg hover:shadow-2xl w-40 h-40 p-2 flex flex-col items-center justify-around" *ngFor="let s of services">
+        <img class="h-20 w-20 shadow-md rounded-xl p-2" [src]="s.image" alt="">
+        <p class="text-base font-semibold">{{s.name}}</p>
+    </div>
+</div>
