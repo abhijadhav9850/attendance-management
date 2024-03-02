@@ -1,9 +1,31 @@
 <header class="border-b border-gray-200  bg-white flex gap-2 items-center justify-between py-4 px-6 sticky top-0 z-10">
     <i *ngIf="!show_search" (click)="this.show_sidebar = !this.show_sidebar" class="bx bx-menu bx-rotate-180 cursor-pointer text-3xl"></i>
-    <app-text-input *ngIf="show_search" class="flex-grow"></app-text-input>
+    <app-search-input *ngIf="show_search" class="flex-grow"></app-search-input>
     <i *ngIf="show_search" (click)="show_search = false" class="bx bx-x cursor-pointer text-3xl"></i>
     <div *ngIf="!show_search" class="flex items-center">
         <i (click)=" this.show_search = !this.show_search" class="bx bx-search cursor-pointer mr-4 text-3xl"></i>
-        <i class="bx bx-message-square-add cursor-pointer text-3xl"></i>
+        <i class="bx bx-message-square-add cursor-pointer text-3xl" (click)="popup_open = !popup_open"></i>
     </div>
 </header>
+<div class="flex justify-end p-2">
+    <div class="border border-gray-300 flex h-60 shadow-xl w-80" *ngIf="!popup_open" >
+    <div class="bg-gray-200 flex flex-col gap-2 items-start p-1">
+            <button class="cursor-pointer focus:bg-blue-500 focus:outline-none focus:text-white px-1 py-1 rounded-sm" (click)="show_apply_leave = true; show_travel_request = false;show_HR_letter = false">Leave Tracker</button>
+            <button class="cursor-pointer focus:bg-blue-500 focus:outline-none focus:text-white px-1 py-1 rounded-sm" (click)="show_travel_request = true; show_apply_leave = false; show_HR_letter = false">Travel</button>
+            <button class="cursor-pointer focus:bg-blue-500 focus:outline-none focus:text-white px-1 py-1 rounded-sm" (click)="show_HR_letter = true; show_travel_request = false; show_apply_leave = false">HR Letters</button>
+        </div>    
+        <hr class="w-2">
+        <div class="flex-1 gap-1 p-1" *ngIf="show_HR_letter">
+            <p class="cursor-pointer hover:bg-sky-100 hover:text-blue-500 px-1 py-1">Address Proof</p>
+            <p class="cursor-pointer hover:bg-sky-100 hover:text-blue-500 px-1 py-1">Bonafide Letters</p>
+            <p class="cursor-pointer hover:bg-sky-100 hover:text-blue-500 px-1 py-1">Experience Letters</p>
+        </div>
+        <div class="flex-1 gap-1 p-1" *ngIf="show_travel_request">
+            <p class="cursor-pointer hover:bg-sky-100 hover:text-blue-500 px-1 py-1">Travel Request</p>
+            <p class="cursor-pointer hover:bg-sky-100 hover:text-blue-500 px-1 py-1">Travel Expense</p>
+        </div>
+        <div class="flex-1 gap-1 p-1" *ngIf="show_apply_leave">
+            <p class="cursor-pointer hover:bg-sky-100 hover:text-blue-500 px-1 py-1">Apply Leave</p>
+        </div>
+    </div>    
+</div>
