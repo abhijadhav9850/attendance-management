@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="grid gap-4 md:grid-cols-2 mt-4 xl:grid-cols-6">
-        <div class="border border-gray-200 flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-48 p-2 shadow-lg xl:w-40 xl:h-40" *ngFor="let s of services">
+        <div class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-48 p-2 shadow-lg xl:w-40 xl:h-40" *ngFor="let s of services">
             <img class="h-20 p-2 rounded-xl shadow-md w-20" [src]="s.image" alt="">
             <p class="font-semibold text-base">{{s.name}}</p>
         </div>
