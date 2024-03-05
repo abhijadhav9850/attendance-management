@@ -12,5 +12,19 @@ import { RouterLink } from '@angular/router';
 export class SidebarComponent {
 
   hide:any= false;
+  more_options:any= false;
+
+
+  more:any=[
+    {title:'Performance'},
+    {title:'Files'},
+    {title:'Organization'},
+    {title:'Travel'},
+    {title:'Tasks'},
+    {title:'Cases'},
+    {title:'Employee Engagement'},
+    {title:'HR Letters'},
+    {title:'Onboarding'},
+  ]
 
 }
