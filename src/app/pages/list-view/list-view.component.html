@@ -1,73 +1,86 @@
-<div class="flex flex-col">
-    <div class="bg-gray-100 flex justify-between px-8 py-3.5 items-center">
-        <div class="flex gap-2 items-center">
-            <img class="rounded-full h-8"
-                src="https://media.licdn.com/dms/image/D4D03AQHJGJyKWrNuMA/profile-displayphoto-shrink_800_800/0/1698318206057?e=2147483647&v=beta&t=6GRlhwMFAecvT02VDJA-NBoo1lGqSUPteomvTXcmg6M"
+<div class="flex flex-col justify-between h-full bg-red-500">
+    <div class="flex flex-col">
+        <div class="bg-gray-100 flex flex-col justify-between gap-3 px-2 py-3.5 md:flex-row md:px-8">
+            <div class="flex justify-between md:gap-6">
+                <div class="flex gap-2 items-center">
+                    <img class="rounded-full h-8"
+                        src="https://media.licdn.com/dms/image/D4D03AQHJGJyKWrNuMA/profile-displayphoto-shrink_800_800/0/1698318206057?e=2147483647&v=beta&t=6GRlhwMFAecvT02VDJA-NBoo1lGqSUPteomvTXcmg6M"
+                        alt="">
+                    <select class="bg-gray-100 cursor-pointer font-medium text-gray-600 text-sm" name="" id="">
+                        <option class="bg-white" value="">1 User Nmae</option>
+                    </select>
+                </div>
+                <div class="cursor-pointer flex gap-1.5 items-center">
+                    <i class='bx bx-chevron-left sm:text-2xl text-sm' style='color:#adadad'></i>
+                    <p class="font-medium font-sans text-gray-600 text-sm">03-Mar-2024-9-Mar-2024</p>
+                    <i class='bx bx-chevron-left bx-rotate-180  sm:text-2xl text-sm' style='color:#adadad'></i>
+                </div>
+            </div>
+            <div class="flex justify-between md:gap-3">
+                <select
+                    class="bg-blue-500 cursor-pointer px-2 py-0.5 rounded text-gray-700 text-sm text-white font-medium">
+                    <option class="bg-white text-gray-800 cursor-pointer hover:bg-gray-200" value="">Log Time</option>
+                    <option class="bg-white text-gray-800 cursor-pointer hover:bg-gray-200" value="">Daily Log</option>
+                    <option class="bg-white text-gray-800 cursor-pointer hover:bg-gray-200" value="">Weekly Log</option>
+                    <option class="bg-white text-gray-800 cursor-pointer hover:bg-gray-200" value="">Semi Monthly Log
+                    </option>
+                    <option class="bg-white text-gray-800 cursor-pointer hover:bg-gray-200" value="">Monthly Log
+                    </option>
+                </select>
+                <div class="cursor-pointer flex gap-5 items-center">
+                    <i class='bx bx-filter-alt text-2xl' style='color:#cecdcd'></i>
+                    <i class='bx bx-dots-horizontal-rounded text-2x' style='color:#cecdcd'></i>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div
+            class="border border-gary-600 bg-white flex flex-col gap-3 justify-between md:flex-row md:items-center mx-4 px-4 py-2 rounded-2xl sm:flex-col shadow-sm">
+            <div class="flex justify-between items-center md:gap-4">
+                <select class="cursor-pointer lg:text-base text-xs" name="" id="">
+                    <option class="text-gray-800 bg-white" value="">Select Projcet</option>
+                    <option class="text-gray-800 bg-white" value="">Add Projcet</option>
+                </select>
+                <select class="cursor-pointer lg:text-base text-xs" name="" id="">
+                    <option class="text-gray-800" value="">Select Job</option>
+                    <option class="text-gray-800" value="">Add Projcet</option>
+                </select>
+                <div class="flex gap-2 items-center">
+                    <i class='bx bxs-layer md:text-2xl md:text-xl sm:text-lg'></i>
+                    <select class="cursor-pointer lg:text-base text-xs" name="" id="">
+                        <option class="bg-white text-gray-800" value="">Select Job</option>
+                        <option class="bg-white text-gray-800" value="">Add Projcet</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex justify-between md:gap-4">
+                <input class="border-2 active:border-blue-500 lg:text-base py-2 px-2 rounded-full sm:text-xs text-xs"
+                    type="text" placeholder="What are you working on?">
+                <div class="bg-teal-500 flex gap-2 items-center px-2 rounded md:px-3">
+                    <i class='bx bx-time md:text-2xl text-xs' style='color:#ffffff'></i>
+                    <p class="font-sans text-white md:text-base text-xs">00:00:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <img class="h-32"
+                src="https://user-images.githubusercontent.com/74838472/108693548-91e3c400-74c3-11eb-8480-474d01314b29.png"
                 alt="">
-            <select class="bg-gray-100 cursor-pointer lg:text-lg sm:text-xs text-gray-700 text-xs" name="1 User Nmae"
-                id="">
-                <option class="bg-white" value="">1 User Nmae</option>
-            </select>
-        </div>
-        <div class="cursor-pointer flex gap-1.5 items-center">
-            <i class='bx bx-chevron-left sm:text-2xl lg:text-3xl' style='color:#adadad'></i>
-            <p class="font-sans lg:text-base sm:text-xs text-xs">03-Mar-2024-9-Mar-2024</p>
-            <i class='bx bx-chevron-left bx-rotate-180 sm:text-2xl lg:text-3xl' style='color:#adadad'></i>
-        </div>
-        <div class="cursor-pointer flex gap-3 items-center">
-            <select class="bg-blue-500 cursor-pointer px-2 py-0.5 rounded text-gray-700 text-sm text-white"
-                name="1 User Nmae" id="">
-                <option class="bg-white text-black cursor-pointer" value="">Log Time</option>
-                <option class="bg-white text-black cursor-pointer" value="">Daily Log</option>
-                <option class="bg-white text-black cursor-pointer" value="">Weekly Log</option>
-                <option class="bg-white text-black cursor-pointer" value="">Semi Monthly Log</option>
-                <option class="bg-white text-black cursor-pointer" value="">Monthly Log</option>
-            </select>
-            <i class='bx bx-filter-alt text-2xl' style='color:#cecdcd'></i>
-            <i class='bx bx-dots-horizontal-rounded text-2x' style='color:#cecdcd'></i>
+            <p class="text-gray-600">No Time Log(s) found</p>
         </div>
     </div>
-    <div class="border border-gary-600 bg-white flex justify-between items-center mx-8 mt-6 px-8 py-1.5">
-        <select class="cursor-pointer lg:text-base sm:text-xs text-xs" name="" id="">
-            <option class="text-black bg-white" value="">Select Projcet</option>
-            <option class="text-black bg-white" value="">Add Projcet</option>
-        </select>
-        <select class="cursor-pointer lg:text-base sm:text-xs text-xs" name="" id="">
-            <option class="text-black" value="">Select Job</option>
-            <option class="text-black" value="">Add Projcet</option>
-        </select>
-        <input class="outline-none focus:border-blue-500 lg:text-base sm:text-xs text-xs" type="text"
-            placeholder="What are you working on?">
-        <div class="flex gap-2">
-            <i class='bx bxs-layer text-2xl sm:text-lg'></i>
-            <select class="cursor-pointer lg:text-base sm:text-xs text-xs" name="" id="">
-                <option class="bg-white text-black" value="">Select Job</option>
-                <option class="bg-white text-black" value="">Add Projcet</option>
-            </select>
-        </div>
-        <div class="bg-teal-500 flex gap-2 items-center lg:px-3 lg:py-2 rounded sm:px-1 sm:py-0.5">
-            <i class='bx bx-time lg:text-2xl sm:text-xs text-xs' style='color:#ffffff'></i>
-            <p class="font-sans text-white lg:text-base sm:text-xs text-xs">00:00:00</p>
-        </div>
-    </div>
-    <div class="flex flex-col items-center relative top-12">
-        <img class="h-32"
-            src="https://user-images.githubusercontent.com/74838472/108693548-91e3c400-74c3-11eb-8480-474d01314b29.png"
-            alt="">
-        <p class="text-gray-600">No Time Log(s) found</p>
-    </div>
-    <div class="bg-white flex gap-4 items-center justify-end pr-10 py-2 relative shadow-inner top-52 ">
+    <div class="bg-white flex gap-4 items-center justify-end pr-10 py-2 shadow-inner">
         <div class="flex flex-col border-l-4 border-green-500 pl-2 text-sm">
-            <p>Total</p>
+            <p class="text-gray-600">Total</p>
             <p class="font-medium text-green-600">00:00 Hrs</p>
         </div>
         <div class="flex flex-col border-l-4 border-purple-500 pl-2 text-sm">
-            <p>Submitted</p>
+            <p class="text-gray-600">Submitted</p>
             <p class="font-medium text-orange-500">00:00 Hrs</p>
         </div>
         <div class="border border-green-600 flex gap-6 items-center py-0.5 px-2 rounded text-sm">
             <div class="flex flex-col">
-                <p>Not Submitted</p>
+                <p class="text-gray-600">Not Submitted</p>
                 <p class="font-medium text-blue-500">00:00 Hrs</p>
             </div>
             <i class='bx bx-link-external text-4xl' style='color:rgba(14,172,83,0.72)'></i>
