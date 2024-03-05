@@ -1,56 +1,30 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-
+import { Observable } from 'rxjs/internal/Observable';
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,NgIf,DatePipe],
   templateUrl: './card.component.html',
+  providers: [DatePipe]
 })
-export class CardComponent {
-  now: Date = new Date();
-  card_data = [
-    {
-      title: 'Birthday',
-      image:
-        'https://www.shutterstock.com/image-vector/balloon-cartoon-style-bunch-balloons-600nw-1931584802.jpg',
-      caption: 'No birthdays today',
-    },
-    {
-      title: 'New Hires',
-      image:
-        'https://cdni.iconscout.com/illustration/premium/thumb/recruiting-and-hiring-managers-finding-candidates-2739198-2277522.png',
-      caption: 'No New Joinees in past 15 days.',
-    },
-    {
-      title: 'Favorites',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPNz1VafwtqGwfMoDF-hoovafbBTPDAheq4dO2D_SkFnFp4FvcBZKi7qu9LRmwGHgKNEI&usqp=CAU',
-      caption: 'No Favorites found.',
-    },
-    {
-      title: 'Quick Links',
-      image: 'https://cdn-icons-png.flaticon.com/512/282/282100.png',
-      caption: 'Link 1',
-    },
-    {
-      title: 'Request For Approval',
-      image:
-        'https://static.vecteezy.com/system/resources/thumbnails/010/856/652/small/no-result-data-document-or-file-not-found-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-etc-vector.jpg',
-      caption: 'No record found',
-      cap: 'Pending',
-      count: '0',
-    },
-    {
-      title: 'Attendance',
-      hrs: this.now,
-      date: '1 Mar 2024',
-      early: '00:05',
-    },
-  ];
-  constructor() {
-    setInterval(() => {
-      this.now = new Date();
-    }, 1);
-  }
+export class CardComponent {  
+  currentTime:any= new Date();
+  events:any=[
+    {img:"../../../assets/birthday-cake-birthday.svg",name:"Birthday"},
+    {img:"../../../assets/employee-icon-6.jpg",name:"New Hires"},
+    {img:"../../../assets/favorite-icon-png-8.jpg",name:"Favorites"},
+    {img:"../../../assets/quicklinks.jpg",name:"Quick Links"},
+    {img:"../../../assets/Announcements.png",name:"Announcements"},
+    {img:"../../../assets/Upcoming Holidays.png",name:"Upcoming Holidays"},
+  ]
+
+  leave:any=[
+    {leave:"Casual Leave", img:'../../../assets/casual.png',day1:1,day2:2},
+    {leave:"Leave Without Pay", img:'../../../assets/without.png',day1:1,day2:2},
+    {leave:"Sabbatical Leave", img:'../../../assets/Sabbatical.png',day1:1,day2:2},
+    {leave:"Sick Leave", img:'../../../assets/sick.png',day1:1,day2:2},
+  ]
+  
 }

@@ -1,47 +1,34 @@
-<div class="grid gap-4 md:grid-cols-2 mt-4 xl:grid-cols-6 place-items-center">
-    <div
-        class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-60 p-2 shadow-lg xl:w-40 xl:h-60">
-        <p class="font-semibold text-base">Casual Leave</p>
-        <img class="h-20 w-20" src="../../../assets/casual.png" alt="">
-        <p class="text-sm">Available : 2</p>
-        <p class="text-sm">Booked : 1</p>
-    </div>
-    <div
-        class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-60 p-2 shadow-lg xl:w-40 xl:h-60">
-        <p class="font-semibold text-base">Leave Without Pay</p>
-        <img class="h-20 w-20" src="../../../assets/without.png" alt="">
-        <p class="text-sm">Booked : 0</p>
-        <p class="text-sm"></p>
-    </div>
-    <div
-        class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-60 p-2 shadow-lg xl:w-40 xl:h-60">
-        <p class="font-semibold text-base">Sabbatical Leave</p>
-        <img class="h-20 w-20" src="../../../assets/Sabbatical.png" alt="">
-        <p class="text-sm">Available : 3</p>
-        <p class="text-sm">Booked : 0</p>
-    </div>
-    <div
-        class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-60 p-2 shadow-lg xl:w-40 xl:h-60">
-        <p class="font-semibold text-base">Sick Leave</p>
-        <img class="h-20 w-20" src="../../../assets/sick.png" alt="">
-        <p class="text-sm">Available : 2</p>
-        <p class="text-sm">Booked : 1</p>
-    </div>
-</div>
-<div class="flex items-center justify-between p-2">
-    <app-dropdown [list]="['All Leave and Holidays','Only Leave','Only Holidays']"></app-dropdown>
-    <div class="bg-slate-100 rounded-lg">
-        <button class="border-2 p-1 rounded-s-md hover:text-blue-500">Upcoming</button>
-        <button class="border-2 p-1 rounded-e-md hover:text-blue-500">History</button>
-    </div>
-</div>
-<hr class="w-full">
-<div class="border p-2 m-2 border-gray-300 w-full h-auto ">
-    <div *ngFor="let i of leave_and_holidays" class="flex items-center p-2 shadow-sm gap-10">
-        <div class="flex gap-2 items-center">
-            <img class="w-4 h-4" src="../../../assets/calender.png" alt="">
-            <p>{{i.date}}</p>
+<div class="gap-6 grid md:grid-cols-2 lg:grid-cols-12 p-6">
+    <div *ngFor="let leaves of leaves"
+        class="bg-white cursor-pointer flex flex-col gap-4 hover:shadow-md items-center lg:col-span-3 overflow-hidden px-6 py-8 rounded-2xl shadow">
+        <p class="font-medium text-[20px]">{{leaves.title}}</p>
+        <img class="h-16 w-16" [src]="leaves.img_url" alt="">
+        <div class="text-center">
+            <p class="text-[16px]">Available : {{leaves.leave_available}}</p>
+            <p class="text-[16px]">Booked : {{leaves.leave_booked}}</p>
         </div>
-        <p>{{i.name}}</p>
+    </div>
+</div>
+<div class="bg-white m-6 rounded-2xl">
+    <div class="flex items-center justify-between px-6 py-4">
+        <app-dropdown [list]="['All Leave and Holidays','Only Leave','Only Holidays']"></app-dropdown>
+        <div>
+            <button class="duration-300 ease-in-out p-2 transition font-medium"
+                [ngClass]="{'text-[#4f46e5] border-b-2 border-[#4f46e5]': selected_tab === 'Upcoming', 'text-black': selected_tab !== 'Upcoming'}"
+                (click)="toggle_tab('Upcoming')">Upcoming</button>
+            <button class="duration-300 ease-in-out p-2 transition font-medium"
+                [ngClass]="{'text-[#4f46e5] border-b-2 border-[#4f46e5]': selected_tab === 'History', 'text-black': selected_tab !== 'History'}"
+                (click)="toggle_tab('History')">History</button>
+        </div>
+    </div>
+    <hr class="w-full">
+    <div class="w-full h-auto ">
+        <div *ngFor="let i of leave_and_holidays" class="grid md:grid-cols-2 lg:grid-cols-12 px-6 py-4 shadow-sm hover:shadow-md">
+            <div class="flex gap-2 items-center lg:col-span-3">
+                <img class="w-5 h-5" src="../../../assets/calender.png" alt="">
+                <p class="text-base">{{i.date}}</p>
+            </div>
+            <p class="font-medium lg:col-span-3 text-lg ">{{i.name}}</p>
+        </div>
     </div>
 </div>
