@@ -14,11 +14,11 @@
         <app-dropdown [list]="['All Leave and Holidays','Only Leave','Only Holidays']"></app-dropdown>
         <div>
             <button class="duration-300 ease-in-out p-2 transition font-medium"
-                [ngClass]="{'text-[#4f46e5] border-b-2 border-[#4f46e5]': selectedTab === 'Upcoming', 'text-black': selectedTab !== 'Upcoming'}"
-                (click)="toggleTab('Upcoming')">Upcoming</button>
+                [ngClass]="{'text-[#4f46e5] border-b-2 border-[#4f46e5]': selected_tab === 'Upcoming', 'text-black': selected_tab !== 'Upcoming'}"
+                (click)="toggle_tab('Upcoming')">Upcoming</button>
             <button class="duration-300 ease-in-out p-2 transition font-medium"
-                [ngClass]="{'text-[#4f46e5] border-b-2 border-[#4f46e5]': selectedTab === 'History', 'text-black': selectedTab !== 'History'}"
-                (click)="toggleTab('History')">History</button>
+                [ngClass]="{'text-[#4f46e5] border-b-2 border-[#4f46e5]': selected_tab === 'History', 'text-black': selected_tab !== 'History'}"
+                (click)="toggle_tab('History')">History</button>
         </div>
     </div>
     <hr class="w-full">

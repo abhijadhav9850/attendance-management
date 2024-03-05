@@ -30,9 +30,9 @@ export class LeaveTrackerComponent {
     { date: "25 Dec,Wed", name: "Christmas" },
   ]
 
-  selectedTab: string = 'Upcoming';
+  selected_tab: string = 'Upcoming';
 
-  toggleTab(tab: string) {
-    this.selectedTab = tab;
+  toggle_tab(tab: string) {
+    this.selected_tab = tab;
   }
 }
