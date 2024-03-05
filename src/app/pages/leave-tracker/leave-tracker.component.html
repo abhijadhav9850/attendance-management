@@ -1,0 +1,47 @@
+<div class="grid gap-4 md:grid-cols-2 mt-4 xl:grid-cols-6 place-items-center">
+    <div
+        class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-60 p-2 shadow-lg xl:w-40 xl:h-60">
+        <p class="font-semibold text-base">Casual Leave</p>
+        <img class="h-20 w-20" src="../../../assets/casual.png" alt="">
+        <p class="text-sm">Available : 2</p>
+        <p class="text-sm">Booked : 1</p>
+    </div>
+    <div
+        class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-60 p-2 shadow-lg xl:w-40 xl:h-60">
+        <p class="font-semibold text-base">Leave Without Pay</p>
+        <img class="h-20 w-20" src="../../../assets/without.png" alt="">
+        <p class="text-sm">Booked : 0</p>
+        <p class="text-sm"></p>
+    </div>
+    <div
+        class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-60 p-2 shadow-lg xl:w-40 xl:h-60">
+        <p class="font-semibold text-base">Sabbatical Leave</p>
+        <img class="h-20 w-20" src="../../../assets/Sabbatical.png" alt="">
+        <p class="text-sm">Available : 3</p>
+        <p class="text-sm">Booked : 0</p>
+    </div>
+    <div
+        class="border border-gray-200 cursor-pointer flex flex-col hover:shadow-2xl items-center justify-around md:w-48 md:h-60 p-2 shadow-lg xl:w-40 xl:h-60">
+        <p class="font-semibold text-base">Sick Leave</p>
+        <img class="h-20 w-20" src="../../../assets/sick.png" alt="">
+        <p class="text-sm">Available : 2</p>
+        <p class="text-sm">Booked : 1</p>
+    </div>
+</div>
+<div class="flex items-center justify-between p-2">
+    <app-dropdown [list]="['All Leave and Holidays','Only Leave','Only Holidays']"></app-dropdown>
+    <div class="bg-slate-100 rounded-lg">
+        <button class="border-2 p-1 rounded-s-md hover:text-blue-500">Upcoming</button>
+        <button class="border-2 p-1 rounded-e-md hover:text-blue-500">History</button>
+    </div>
+</div>
+<hr class="w-full">
+<div class="border p-2 m-2 border-gray-300 w-full h-auto ">
+    <div *ngFor="let i of leave_and_holidays" class="flex items-center p-2 shadow-sm gap-10">
+        <div class="flex gap-2 items-center">
+            <img class="w-4 h-4" src="../../../assets/calender.png" alt="">
+            <p>{{i.date}}</p>
+        </div>
+        <p>{{i.name}}</p>
+    </div>
+</div>

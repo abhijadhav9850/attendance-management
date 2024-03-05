@@ -1,0 +1,4 @@
+<label class="text-sm">{{label}}</label>
+<select [disabled]="disabled" [(ngModel)]="value" (ngModelChange)="on_change($event)" class="bg-white font-normal h-10 p-1 rounded-sm text-sm w-full">
+    <option *ngFor="let item of list" [value]="item.value || item" class="text-xs font-semibold"> {{item.title || item}} </option>
+</select>
