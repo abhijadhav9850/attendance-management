@@ -1,14 +1,27 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-
+import { Observable } from 'rxjs/internal/Observable';
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,NgIf],
   templateUrl: './card.component.html',
+  providers: [DatePipe]
 })
 export class CardComponent {
   now: Date = new Date();
+  
+  currentTime$:any= new Date();
+
+  // constructor(public date:DatePipe) {
+  //   this.currentTime$ = new Observable(observer => {
+  //     setInterval(() => {
+  //       observer.next(new Date());
+  //     }, 1000);
+  //   });
+  // }
+
   card_data = [
     {
       title: 'Birthday',
@@ -48,9 +61,10 @@ export class CardComponent {
       early: '00:05',
     },
   ];
-  constructor() {
-    setInterval(() => {
-      this.now = new Date();
-    }, 1);
-  }
+  // constructor() {
+  //   setInterval(() => {
+  //     this.now = new Date();
+  //   }, 1);
+  // }
+  
 }
