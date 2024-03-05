@@ -5,15 +5,16 @@ import { ServicesPageComponent } from './pages/services-page/services-page.compo
 import { LeaveTrackerComponent } from './pages/leave-tracker/leave-tracker.component';
 import { DropdownComponent } from './components/inputs/dropdown/dropdown.component';
 
-
 export const routes: Routes = [
-
-    { path: '', pathMatch: 'full', redirectTo: 'dashboard-layout' },
-    { path: 'dashboard-layout', component: DashboardLayoutComponent,children:[
-        {path:'dashboard', component: DashboardComponent},
-        {path:'services', component:ServicesPageComponent},
-        {path:'leave-tracker', component:LeaveTrackerComponent},
-    ] },
-    {path:'dropdown', component:DropdownComponent},
-
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard-layout' },
+  {
+    path: 'dashboard-layout',
+    component: DashboardLayoutComponent,
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'services', component: ServicesPageComponent },
+      { path: 'leave-tracker', component: LeaveTrackerComponent },
+    ],
+  },
+  { path: 'dropdown', component: DropdownComponent },
 ];
