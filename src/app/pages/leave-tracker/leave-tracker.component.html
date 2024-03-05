@@ -23,12 +23,12 @@
     </div>
     <hr class="w-full">
     <div class="w-full h-auto ">
-        <div *ngFor="let i of leave_and_holidays" class="grid md:grid-cols-2 lg:grid-cols-12 px-6 py-4 shadow-sm">
+        <div *ngFor="let i of leave_and_holidays" class="grid md:grid-cols-2 lg:grid-cols-12 px-6 py-4 shadow-sm hover:shadow-md">
             <div class="flex gap-2 items-center lg:col-span-3">
                 <img class="w-5 h-5" src="../../../assets/calender.png" alt="">
-                <p class="text-[16px]">{{i.date}}</p>
+                <p class="text-base">{{i.date}}</p>
             </div>
-            <p class="font-medium lg:col-span-3 text-[18px] ">{{i.name}}</p>
+            <p class="font-medium lg:col-span-3 text-lg ">{{i.name}}</p>
         </div>
     </div>
 </div>
