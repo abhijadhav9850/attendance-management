@@ -1,0 +1,39 @@
+<div class="gap-6 grid md:grid-cols-2 lg:grid-cols-12 p-6">
+  <div
+    class="bg-white cursor-pointer flex flex-col gap-4 hover:shadow-md items-center lg:col-span-3 overflow-hidden px-6 py-8 rounded-2xl shadow">
+    <div class="flex justify-around items-center gap-2">
+      <p class="bg-red-200 p-4 font-semibold rounded-lg gap-3">{{ currentTime | date:'hh' }}</p>:
+      <p class="bg-red-200 p-4 font-semibold rounded-lg gap-3">{{ currentTime | date:'mm' }}</p>:
+      <p class="bg-red-200 p-4 font-semibold rounded-lg gap-3">{{ currentTime | date:'ss' }}</p>
+    </div>
+    <p class="text-xs flex flex-col items-center">General <span>10:00 AM TO 07:00 PM</span></p>
+    <div class="flex gap-5">
+      <button class="text-sm text-white hover:shadow-md rounded-lg py-2 px-4">Check-in</button>
+      <button class="text-sm text-white bg-red-400 hover:shadow-md rounded-lg py-2 px-4">Check-out</button>
+    </div>
+  </div>
+  <div *ngFor="let i of events"
+    class="bg-white cursor-pointer flex flex-col gap-4 hover:shadow-md lg:col-span-3 overflow-hidden px-6 py-8 rounded-2xl shadow">
+    <div class="flex flex-col gap-8">
+      <div class="flex items-center gap-5">
+        <img class="w-12 h-12" [src]="i.img" alt="">
+        <p class="text-lg font-semibold">{{i.name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white cursor-pointer flex flex-col gap-4 hover:shadow-md items-start lg:col-span-3 overflow-hidden px-6 py-8 rounded-2xl shadow">
+    <div class="flex items-center gap-7">
+      <img class="w-12 h-12" src="../../../assets/Leave Report.png" alt="">
+      <p class="text-lg font-semibold">Leave Report</p>
+    </div>
+    <div *ngFor="let l of leave" class="flex flex-col">
+      <div class="flex items-center gap-8">
+        <img class="w-7 h-7 ml-3" [src]="l.img" alt="">
+        <div class="flex flex-col gap-2">
+          <p class="text-xs">{{l.leave}}</p>
+          <p class="text-xs">Taken {{l.day1}} Day | <span>Balance {{l.day2}} Day</span> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

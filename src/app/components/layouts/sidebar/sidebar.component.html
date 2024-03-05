@@ -1,0 +1,38 @@
+<div class="flex h-[100vh] bg-[#0f172a] overflow-y-auto overflow-x-hidden left-0 sticky top-0">
+    <div class=" flex flex-col gap-8 h-full p-5 w-72">
+        <div class="flex justify-end cursor-pointer text-white text-2xl gap-6">
+            <div>
+                <i class='bx bxs-bell mr-4'></i>
+                <i class='bx bx-user-circle'></i>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 items-center justify-center">
+            <div class="flex justify-center ">
+                <img class="h-24 rounded-full" src="https://media.licdn.com/dms/image/D4D03AQHJGJyKWrNuMA/profile-displayphoto-shrink_800_800/0/1698318206057?e=2147483647&v=beta&t=6GRlhwMFAecvT02VDJA-NBoo1lGqSUPteomvTXcmg6M">
+            </div>
+            <div class="flex flex-col gap-1 items-center justify-center ">
+                <h1 class="font-bold font-sans ordinal text-sm text-white">User Name</h1>
+                <p class="ordinal text-xs text-blue-100"></p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5">
+            <h1 class="font-bold font-sans ordinal text-blue-600 text-sm whitespace-nowrap">Welcome to Attendance Management</h1>
+            <div class="text-white flex flex-col gap-2">
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard-layout/services"> <i class='bx bxs-grid mr-2 text-2xl'></i> Services</p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard-layout/profile"> <i class='bx bxs-home mr-2 text-2xl'></i> Home </p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center"> <i class='bx bxs-user mr-2 text-2xl '></i> Self-Services </p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard-layout/leave-tracker"> <i class='bx bx-calendar-check mr-2 text-2xl'></i> Leave Tracker</p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center"> <i class='bx bx-time mr-2 text-2xl'></i> Time Tracker</p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center"> <i class='bx bx-pie-chart-alt mr-2 text-2xl'></i> Reports</p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" (click)="more_options = !more_options"> <i class='bx bx-dots-horizontal-rounded mr-2 text-2xl'></i> More</p>
+              @if (more_options == true) {
+                  <div class="flex justify-center" *ngFor="let item of more">
+                  <p class="cursor-pointer w-4/5 flex items-center"> <i class='{{item.class}} mr-2 text-2xl'></i> {{item.title}}</p>
+                  </div>
+              }
+            </div>
+        </div>
+    </div>
+</div>
+
+
