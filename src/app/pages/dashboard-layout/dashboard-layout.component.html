@@ -1,7 +1,7 @@
 <div class="flex h-full relative w-full">
     <sidebar *ngIf="navbar.show_sidebar"></sidebar>
-    <div class="overflow-y-scroll w-full">
+    <div class="w-full">
         <navbar #navbar></navbar>
-        <router-outlet></router-outlet>
+        <router-outlet class="overflow-y-scroll"></router-outlet>
     </div>
 </div>

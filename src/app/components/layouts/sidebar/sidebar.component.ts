@@ -12,5 +12,20 @@ import { RouterLink } from '@angular/router';
 export class SidebarComponent {
 
   hide:any= false;
+  more_options:any= false;
+
+
+  more:any=[
+  
+    {title:'Performance'},
+    {class:'bx bx-file',title:'Files'},
+    {class:'bx bx-buildings',title:'Organization'},
+    {title:'Travel'},
+    {title:'Tasks'},
+    {title:'Cases'},
+    {title:'Employee Engagement'},
+    {title:'HR Letters'},
+    {title:'Onboarding'},
+  ]
 
 }
