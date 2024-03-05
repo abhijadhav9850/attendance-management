@@ -16,9 +16,10 @@ export class SidebarComponent {
 
 
   more:any=[
+  
     {title:'Performance'},
-    {title:'Files'},
-    {title:'Organization'},
+    {class:'bx bx-file',title:'Files'},
+    {class:'bx bx-buildings',title:'Organization'},
     {title:'Travel'},
     {title:'Tasks'},
     {title:'Cases'},
