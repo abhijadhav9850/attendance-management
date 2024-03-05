@@ -28,11 +28,20 @@
         <p class="text-sm">Booked : 1</p>
     </div>
 </div>
-
 <div class="flex items-center justify-between p-2">
     <app-dropdown [list]="['All Leave and Holidays','Only Leave','Only Holidays']"></app-dropdown>
     <div class="bg-slate-100 rounded-lg">
         <button class="border-2 p-1 rounded-s-md hover:text-blue-500">Upcoming</button>
         <button class="border-2 p-1 rounded-e-md hover:text-blue-500">History</button>
+    </div>
+</div>
+<hr class="w-full">
+<div class="border p-2 m-2 border-gray-300 w-full h-auto ">
+    <div *ngFor="let i of leave_and_holidays" class="flex items-center p-2 shadow-sm gap-10">
+        <div class="flex gap-2 items-center">
+            <img class="w-4 h-4" src="../../../assets/calender.png" alt="">
+            <p>{{i.date}}</p>
+        </div>
+        <p>{{i.name}}</p>
     </div>
 </div>
