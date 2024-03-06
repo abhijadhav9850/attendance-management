@@ -8,7 +8,7 @@
     </div>
     <p class="text-xs flex flex-col items-center">General <span>10:00 AM TO 07:00 PM</span></p>
     <div class="flex gap-5">
-      <button class="text-sm text-white hover:shadow-md rounded-lg py-2 px-4">Check-in</button>
+      <button class="text-sm text-white bg-blue-500 hover:shadow-md rounded-lg py-2 px-4">Check-in</button>
       <button class="text-sm text-white bg-red-400 hover:shadow-md rounded-lg py-2 px-4">Check-out</button>
     </div>
   </div>
@@ -29,7 +29,7 @@
     <div *ngFor="let l of leave" class="flex flex-col">
       <div class="flex items-center gap-8">
         <img class="w-7 h-7 ml-3" [src]="l.img" alt="">
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-1">
           <p class="text-xs">{{l.leave}}</p>
           <p class="text-xs">Taken {{l.day1}} Day | <span>Balance {{l.day2}} Day</span> </p>
         </div>
