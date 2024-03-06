@@ -26,5 +26,30 @@ export class CardComponent {
     {leave:"Sabbatical Leave", img:'../../../assets/Sabbatical.png',day1:1,day2:2},
     {leave:"Sick Leave", img:'../../../assets/sick.png',day1:1,day2:2},
   ]
+
+  latitude: number=0
+  longitude: number=0
+  errorMessage: any=""
+
+  constructor() { }
+
+  get_location() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          this.latitude = position.coords.latitude;
+          this.longitude = position.coords.longitude;
+          console.log(this.longitude);
+          
+          this.errorMessage = null;
+        },
+        error => {
+          this.errorMessage = "Error getting location.";
+        }
+      );
+    } else {
+      this.errorMessage = "Geolocation is not supported by this browser.";
+    }
+  }
   
 }
