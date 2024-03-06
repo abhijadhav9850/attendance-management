@@ -7,13 +7,16 @@ import { DropdownComponent } from './components/inputs/dropdown/dropdown.compone
 import { CardComponent } from './components/card/card.component';
 
 export const routes: Routes = [
-
-    { path: '', pathMatch: 'full', redirectTo: 'dashboard-layout' },
-    { path: 'dashboard-layout', component: DashboardLayoutComponent,children:[
-        {path:'dashboard', component: DashboardComponent},
-        {path:'services', component:ServicesPageComponent},
-        {path:'leave-tracker', component:LeaveTrackerComponent},
-    ] },
-    {path:'dropdown', component:DropdownComponent},
-
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+  {
+    path: 'dashboard',
+    component: DashboardLayoutComponent,
+    children: [
+      { path: '', component: CardComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'services', component: ServicesPageComponent },
+      { path: 'leave-tracker', component: LeaveTrackerComponent },
+    ],
+  },
+  { path: 'dropdown', component: DropdownComponent },
 ];
