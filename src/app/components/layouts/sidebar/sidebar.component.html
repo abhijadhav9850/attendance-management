@@ -18,15 +18,15 @@
         <div class="flex flex-col gap-5">
             <h1 class="font-bold font-sans ordinal text-blue-600 text-sm whitespace-nowrap">Welcome to Attendance Management</h1>
             <div class="text-white flex flex-col gap-2">
-                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard-layout/services"> <i class='bx bxs-grid mr-2 text-2xl'></i> Services</p>
-                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard-layout/profile"> <i class='bx bxs-home mr-2 text-2xl'></i> Home </p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard/services"> <i class='bx bxs-grid mr-2 text-2xl'></i> Services</p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard/"> <i class='bx bxs-home mr-2 text-2xl'></i> Home </p>
                 <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center"> <i class='bx bxs-user mr-2 text-2xl '></i> Self-Services </p>
-                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard-layout/leave-tracker"> <i class='bx bx-calendar-check mr-2 text-2xl'></i> Leave Tracker</p>
+                <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" routerLink="/dashboard/leave-tracker"> <i class='bx bx-calendar-check mr-2 text-2xl'></i> Leave Tracker</p>
                 <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center"> <i class='bx bx-time mr-2 text-2xl'></i> Time Tracker</p>
                 <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center"> <i class='bx bx-pie-chart-alt mr-2 text-2xl'></i> Reports</p>
                 <p class="cursor-pointer p-2 rounded-lg focus:bg-slate-700 flex items-center" (click)="more_options = !more_options"> <i class='bx bx-dots-horizontal-rounded mr-2 text-2xl'></i> More</p>
               @if (more_options == true) {
-                  <div class="flex justify-center" *ngFor="let item of more">
+                  <div class="flex justify-center my-2" *ngFor="let item of more">
                   <p class="cursor-pointer w-4/5 flex items-center"> <i class='{{item.class}} mr-2 text-2xl'></i> {{item.title}}</p>
                   </div>
               }
