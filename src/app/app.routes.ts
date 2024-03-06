@@ -5,6 +5,7 @@ import { ServicesPageComponent } from './pages/services-page/services-page.compo
 import { LeaveTrackerComponent } from './pages/leave-tracker/leave-tracker.component';
 import { DropdownComponent } from './components/inputs/dropdown/dropdown.component';
 import { CardComponent } from './components/card/card.component';
+import { ListViewComponent } from './pages/list-view/list-view.component';
 
 
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
         {path:'dashboard', component: DashboardComponent},
         {path:'services', component:ServicesPageComponent},
         {path:'leave-tracker', component:LeaveTrackerComponent},
+        {path:'list-view', component:ListViewComponent},
     ] },
     {path:'dropdown', component:DropdownComponent},
 
