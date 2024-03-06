@@ -8,8 +8,8 @@
     </div>
     <p class="text-xs flex flex-col items-center">General <span>10:00 AM TO 07:00 PM</span></p>
     <div class="flex gap-5">
-      <button class="text-sm text-white bg-blue-500 hover:shadow-md rounded-lg py-2 px-4">Check-in</button>
-      <button class="text-sm text-white bg-red-400 hover:shadow-md rounded-lg py-2 px-4">Check-out</button>
+      <button class="text-sm text-white bg-blue-500 hover:shadow-md rounded-lg py-2 px-4" (click)="get_location()">Check-in</button>
+      <button class="text-sm text-white bg-red-400 hover:shadow-md rounded-lg py-2 px-4" (click)="get_location()">Check-out</button>
     </div>
   </div>
   <div *ngFor="let i of events"
