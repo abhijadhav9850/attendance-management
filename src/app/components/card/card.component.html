@@ -8,8 +8,10 @@
     </div>
     <p class="text-xs flex flex-col items-center">General <span>10:00 AM TO 07:00 PM</span></p>
     <div class="flex gap-5">
-      <button class="text-sm text-white bg-blue-500 hover:shadow-md rounded-lg py-2 px-4" (click)="get_location()">Check-in</button>
-      <button class="text-sm text-white bg-red-400 hover:shadow-md rounded-lg py-2 px-4" (click)="get_location()">Check-out</button>
+      <button class="text-sm text-white bg-blue-500 hover:shadow-md rounded-lg py-2 px-4"
+        (click)="showLocation('checkin')">Check-in</button>
+      <button class="text-sm text-white bg-red-400 hover:shadow-md rounded-lg py-2 px-4"
+        (click)="showLocation('checkout')">Check-out</button>
     </div>
   </div>
   <div *ngFor="let i of events"
@@ -21,7 +23,8 @@
       </div>
     </div>
   </div>
-  <div class="bg-white cursor-pointer flex flex-col gap-4 hover:shadow-md items-start lg:col-span-3 overflow-hidden px-6 py-8 rounded-2xl shadow">
+  <div
+    class="bg-white cursor-pointer flex flex-col gap-4 hover:shadow-md items-start lg:col-span-3 overflow-hidden px-6 py-8 rounded-2xl shadow">
     <div class="flex items-center gap-7">
       <img class="w-12 h-12" src="../../../assets/Leave Report.png" alt="">
       <p class="text-lg font-semibold">Leave Report</p>
@@ -33,6 +36,27 @@
           <p class="text-xs">{{l.leave}}</p>
           <p class="text-xs">Taken {{l.day1}} Day | <span>Balance {{l.day2}} Day</span> </p>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class=" p-2 bg-slate-200">
+    <div *ngIf="showLocationPopup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center">
+      <div class="bg-white rounded-lg p-2">
+        <p class="mb-4">Current Location: Latitude {{ latitude }}, Longitude {{ longitude }}</p>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+          (click)="confirmLocationAndStore()">OK</button>
+        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+          (click)="showLocationPopup = false">Cancel</button>
+      </div>
+    </div>
+    <div *ngIf="showCameraPopup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center">
+      <div class="bg-white p-2 m-2 rounded-lg">
+        <webcam [height]="400" [width]="400" [trigger]="triggerObservable" (imageCapture)="handleImageCapture($event)"
+          (initError)="handleInitError($event)"></webcam>
+        <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          (click)="captureImage()">Capture</button>
+        <button class="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+          (click)="cancelCamera()">Cancel</button>
       </div>
     </div>
   </div>
