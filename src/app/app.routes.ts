@@ -15,6 +15,7 @@ export const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'services', component: ServicesPageComponent },
       { path: 'leave-tracker', component: LeaveTrackerComponent },
+      { path: 'list-view', component: ListViewComponent },
     ],
   },
   { path: 'dropdown', component: DropdownComponent },
